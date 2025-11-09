@@ -3,18 +3,14 @@ package otus.gpb.homework.viewandresources
 import android.icu.text.SimpleDateFormat
 import android.icu.util.TimeZone
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.datepicker.MaterialDatePicker
-import com.google.android.material.datepicker.MaterialStyledDatePickerDialog
 import com.google.android.material.textfield.TextInputEditText
 import java.util.Date
 import java.util.Locale
-import kotlin.time.Duration
-import kotlin.time.Duration.Companion.seconds
 
 class ContactsActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.N)
@@ -25,7 +21,6 @@ class ContactsActivity : AppCompatActivity() {
         findViewById<MaterialToolbar>(R.id.contacts_toolbar).setNavigationOnClickListener { finish() }
 
         val bookingDateEditText = findViewById<TextInputEditText>(R.id.booking_date_edit_text)
-
 
 
         val datePickerBuilder = MaterialDatePicker.Builder.datePicker()
