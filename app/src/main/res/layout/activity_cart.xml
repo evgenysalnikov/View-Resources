@@ -24,14 +24,77 @@
             app:title="@string/cart" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/item_image_description"
-        app:srcCompat="@drawable/cart_item_sample"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cart_appbar"
-        app:shapeAppearanceOverlay="@style/roundedCornerStyle"
-        />
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/cart_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:contentDescription="@string/item_image_description"
+            app:shapeAppearanceOverlay="@style/roundedCornerStyle"
+            app:srcCompat="@drawable/cart_item_sample" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="List Item 1"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="category"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Supporting line text lorem ipsum dolor sit amet, consectetur."
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:maxLines="1"
+                android:ellipsize="end"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="16dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="32$"
+                android:textColor="#6E5676"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

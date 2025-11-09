@@ -2,6 +2,6 @@
 <resources>
     <style name="roundedCornerStyle">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">4dp</item>
+        <item name="cornerSize">16dp</item>
     </style>
 </resources>
