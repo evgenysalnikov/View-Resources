@@ -11,4 +11,5 @@
     <color name="icons">@color/white</color>
     <color name="icons_opposite">@color/black</color>
     <color name="input_background">#49454F</color>
+    <color name="total">#DBBCE1</color>
 </resources>

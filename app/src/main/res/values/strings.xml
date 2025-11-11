@@ -19,4 +19,5 @@
     <string name="cart">Cart</string>
     <string name="close">Close</string>
     <string name="item_image_description">Item sample</string>
+    <string name="price">$%1$d</string>
 </resources>
