@@ -23,88 +23,118 @@
             app:navigationIcon="@drawable/arrow_left"
             app:title="@string/cart" />
     </com.google.android.material.appbar.AppBarLayout>
-    
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cart_items"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cart_appbar"
+        app:layout_constraintBottom_toTopOf="@id/final_cart"
         tools:itemCount="4"
         tools:listitem="@layout/cart_item"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         />
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/cart_appbar"-->
-<!--        android:paddingTop="8dp"-->
-<!--        android:paddingBottom="8dp"-->
-<!--        >-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/final_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-<!--        <com.google.android.material.imageview.ShapeableImageView-->
-<!--            android:id="@+id/cart_image"-->
-<!--            android:layout_width="80dp"-->
-<!--            android:layout_height="80dp"-->
-<!--            android:layout_marginLeft="16dp"-->
-<!--            android:layout_marginRight="16dp"-->
-<!--            android:contentDescription="@string/item_image_description"-->
-<!--            app:shapeAppearanceOverlay="@style/roundedCornerStyle"-->
-<!--            app:srcCompat="@drawable/cart_item_sample" />-->
+        <TextView
+            android:id="@+id/total_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Order total"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/total_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="$175.50"
+            android:textColor="@color/total"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/subtotal_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="subtotal"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/total_text"
+            />
+        <TextView
+            android:id="@+id/subtotal_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="$140"
+            android:textColor="@color/total"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/total_price"
+            />
+        <TextView
+            android:id="@+id/shipping_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="shipping"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtotal_text"
+            />
+        <TextView
+            android:id="@+id/shipping_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="$25"
+            android:textColor="@color/total"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtotal_price"
+            />
+        <TextView
+            android:id="@+id/tax_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="tax"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shipping_text"
+            />
+        <TextView
+            android:id="@+id/tax_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="$10.50"
+            android:textColor="@color/total"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shipping_price"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_weight="4"-->
-<!--            >-->
 
-<!--            <TextView-->
-<!--                android:id="@+id/title"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="List Item 1"-->
-<!--                android:textStyle="bold"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/category"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:paddingTop="5dp"-->
-<!--                android:text="category"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/title"-->
-<!--                />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/description"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Supporting line text lorem ipsum dolor sit amet, consectetur."-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                android:maxLines="1"-->
-<!--                android:ellipsize="end"-->
-<!--                />-->
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
-<!--        <LinearLayout-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:paddingLeft="16dp"-->
-<!--            >-->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="32$"-->
-<!--                android:textColor="@color/total"-->
-<!--                android:textStyle="bold"-->
-<!--                />-->
-<!--        </LinearLayout>-->
-<!--    </LinearLayout>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

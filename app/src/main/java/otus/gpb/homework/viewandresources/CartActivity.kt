@@ -39,6 +39,22 @@ class CartActivity : AppCompatActivity() {
             CartItem(image = R.drawable.cart_item_sample, title = "Title 2", category = "category", description = "description 2", price = 32),
             CartItem(image = R.drawable.cart_item_sample, title = "Title 3", category = "category", description = "description 3", price = 32),
             CartItem(image = R.drawable.cart_item_sample, title = "Title 4", category = "category", description = "description 4", price = 32),
+            CartItem(image = R.drawable.cart_item_sample, title = "Title 1", category = "category", description = "description 1", price = 32),
+            CartItem(image = R.drawable.cart_item_sample, title = "Title 2", category = "category", description = "description 2", price = 32),
+            CartItem(image = R.drawable.cart_item_sample, title = "Title 3", category = "category", description = "description 3", price = 32),
+            CartItem(image = R.drawable.cart_item_sample, title = "Title 4", category = "category", description = "description 4", price = 32),
+            CartItem(image = R.drawable.cart_item_sample, title = "Title 1", category = "category", description = "description 1", price = 32),
+            CartItem(image = R.drawable.cart_item_sample, title = "Title 2", category = "category", description = "description 2", price = 32),
+            CartItem(image = R.drawable.cart_item_sample, title = "Title 3", category = "category", description = "description 3", price = 32),
+            CartItem(image = R.drawable.cart_item_sample, title = "Title 4", category = "category", description = "description 4", price = 32),
+            CartItem(image = R.drawable.cart_item_sample, title = "Title 1", category = "category", description = "description 1", price = 32),
+            CartItem(image = R.drawable.cart_item_sample, title = "Title 2", category = "category", description = "description 2", price = 32),
+            CartItem(image = R.drawable.cart_item_sample, title = "Title 3", category = "category", description = "description 3", price = 32),
+            CartItem(image = R.drawable.cart_item_sample, title = "Title 4", category = "category", description = "description 4", price = 32),
+            CartItem(image = R.drawable.cart_item_sample, title = "Title 1", category = "category", description = "description 1", price = 32),
+            CartItem(image = R.drawable.cart_item_sample, title = "Title 2", category = "category", description = "description 2", price = 32),
+            CartItem(image = R.drawable.cart_item_sample, title = "Title 3", category = "category", description = "description 3", price = 32),
+            CartItem(image = R.drawable.cart_item_sample, title = "Title 4", category = "category", description = "description 4", price = 32),
         )
 
         rv.adapter = ViewCartItem(itemsList)
