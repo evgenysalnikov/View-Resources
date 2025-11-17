@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             view.findViewById<TextInputEditText>(R.id.password_field).setText("")
         }
 
-        view.findViewById<Button>(R.id.cancel_btn).setOnClickListener { view ->
+        view.findViewById<Button>(R.id.cancel_btn).setOnClickListener {
             dialog.dismiss()
         }
 

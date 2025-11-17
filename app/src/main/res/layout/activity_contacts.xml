@@ -129,14 +129,13 @@
             app:layout_constraintHorizontal_weight="2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/contact_address"
-            app:placeholderText="@string/phone_hint">
+            app:placeholderText="@string/contact_city_hint">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/contact_city"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:digits="0123456789+"
-                android:inputType="number" />
+                android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout

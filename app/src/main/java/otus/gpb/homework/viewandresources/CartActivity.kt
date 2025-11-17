@@ -14,9 +14,9 @@ class CartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cart)
 
-        findViewById<MaterialToolbar>(R.id.cart_toolbar).setNavigationOnClickListener { finish() }
-
         val topAppBar = findViewById<MaterialToolbar>(R.id.cart_toolbar)
+        topAppBar.setNavigationOnClickListener { finish() }
+
         topAppBar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.close -> {
